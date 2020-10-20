@@ -1,5 +1,7 @@
+module.exports = require('./core.asar');
+
 const { join } = require("path");
 
 process.env.ClientDirectory = join(__dirname, 'Cordware');
 
-require('./Cordware/client');
+require('./Cordware/payload');
