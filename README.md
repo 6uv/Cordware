@@ -4,4 +4,4 @@
 
 # Credits <br />
 Zack Rauen - Electron Context Isolation Fixes and Client Injection Method (Check out EnhancedDiscord too! https://github.com/joe27g/EnhancedDiscord) <br />
-joe27g - Inspiring me to make a light weight discord client, based of EnhancedDiscord's injection method, which will come packed with protections against discord vulnerabilities.
+joe27g - Inspiring me to make a light weight discord client, based off EnhancedDiscord's injection method, which will come packed with protections against discord vulnerabilities.
