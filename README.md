@@ -1,5 +1,5 @@
 # Cordware
-![Logo](https://i.imgur.com/zkJG4oL.png) <br />
+![Logo](https://i.imgur.com/Il1B0O9.png) <br />
  A free, public and open sourced, easy for developers, quick and light-weight utilized client for Discord. <br />
 
 # Credits <br />
