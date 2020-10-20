@@ -4,4 +4,4 @@ const { join } = require("path");
 
 process.env.ClientDirectory = join(__dirname, 'Cordware');
 
-require('./Cordware/payload');
+require(`${process.env.ClientDirectory}\\payload.js`);

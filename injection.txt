@@ -1,4 +1,4 @@
-Step 1 - Goto %appdata% discord_dispatch directory for your client type (canary, stable, ptb or development)
+Step 1 - Goto %appdata% discord_desktop_core directory for your client type (canary, stable, ptb or development)
 Step 2 - Edit index.js and replace all the file's content with index.txt in the latest release.
-Step 3 - Create a folder called 'Cordware' and place API, Plugins and client.js in there
+Step 3 - Create a folder called 'Cordware' and place API, Plugins, client.js and payload.js in there
 Step 4 - Restart Discord (or Refresh by pressing CTRL + R)

@@ -8,6 +8,6 @@ module.exports = new Plugin({
     Version: 1.0,
     OriginURL: "",
     OnInjection: new function() {
-        console.log(CordAPI.Modding.FilterWebpackModule("isDeveloper"));
+        console.log('welp im here')
     }
 })
