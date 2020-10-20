@@ -1,3 +1,5 @@
-var CordAPI = require('./API/API').CordAPI;
+var CordAPI = require('./API/API');
 
-console.log(CordAPI);
+CordAPI.Modding.LoadPlugins();
+
+CordAPI.Logging.Log("Cordware by Yaekith has Loaded. Cordware: Doing discord's job.");
