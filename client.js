@@ -1,18 +1,19 @@
-function webpackCheck(callback) {
-    var Checker = setInterval(async () => {
-        if (!window.webpackJsonp || !window.webpackJsonp.push || typeof window.webpackJsonp.push !== 'function') {
-            return;
-        }
+var electron = require('electron');
+electron.contextBridge.exposeInMainWorld = (dis, cord) => void 0; //electron context isolation fixes
 
-        clearInterval(Checker);
-        return callback(true);
-    }, 1000);
+if (electron.remote.getCurrentWindow().__preload) {
+    require(electron.remote.getCurrentWindow().__preload);
 }
 
-webpackCheck(() => {
+process.once('loaded', async () => 
+{
+    with (!window.webpackJsonp) {
+        await new Promise(_=>setTimeout(_, 1000));
+    }
+
     var CordAPI = require('./API/API');
-    
-    CordAPI.Modding.LoadPlugins();
         
+    CordAPI.Modding.LoadPlugins();
+            
     CordAPI.Logging.Log("Cordware by Yaekith has Loaded. Cordware: Doing discord's job."); 
-})
+});
