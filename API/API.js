@@ -38,6 +38,23 @@ CordAPI =
                 }
             }
         },
+        GlobalWebpackModule: function(module)
+        {
+            var req = window.webpackJsonp.push([[], {'__extra_id__': (module, exports, req) => module.exports = req}, [['__extra_id__']]]);
+
+            for (let i in req.c) {
+                if (req.c.hasOwnProperty(i)) {
+                    let m = req.c[i].exports;
+                    if (m && m.__esModule && m.default) {
+                        for (let e in m.default) {
+                            if (e.toLowerCase().includes(module.toLowerCase())) {
+                                console.log(e, m.default);
+                            };
+                        };
+                    };
+                };
+            };
+        },
         PatchMethod: function(method, name, override) 
         {
             try 
