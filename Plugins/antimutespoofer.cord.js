@@ -24,7 +24,7 @@ module.exports = new Plugin({
                         var voiceStates = CordAPI.Modding.FilterWebpackModule("getVoiceStates").getVoiceStates(guildId);
                         var theirVoiceState = voiceStates[userId];
                         var isLocallyMuted = CordAPI.Modding.FilterWebpackModule("isLocalMute").isLocalMute(userId);
-                        if (theirVoiceState && userId != us.id)
+                        if (guildId && theirVoiceState && userId != us.id)
                         {
                             if (theirVoiceState.selfMute && !isLocallyMuted) 
                             {
