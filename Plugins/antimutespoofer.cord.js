@@ -30,7 +30,7 @@ module.exports = new Plugin({
                             {
                                 //how the fuck can you talk when 'self muted' :troll: (detected exploiter)
                                 CordAPI.Modding.FilterWebpackModule("toggleLocalMute").toggleLocalMute(userId);
-                                CordAPI.Logging.Info(`(ANTI MUTE SPOOFER) ${user.username} tried to use the ws-mute-exploit in your current call. Locally muted them.`);
+                                CordAPI.Logging.Log(`(ANTI MUTE SPOOFER) ${user.username} tried to use the ws-mute-exploit in your current call. Locally muted them.`);
                             }
                         }
                     break;
