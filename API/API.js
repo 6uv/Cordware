@@ -38,6 +38,29 @@ CordAPI =
                 }
             }
         },
+        PatchMethod: function(method, name, override) 
+        {
+            try 
+            {
+                const original = method[name];
+                method[name] = function () 
+                {
+                    const parameters = 
+                    {
+                        thisObject: this,
+                        methodArguments: arguments,
+                        originalMethod: original,
+                        callOriginalMethod: () => parameters.returnValue = parameters.originalMethod.apply(parameters.thisObject, parameters.methodArguments)
+                    };
+                    return override(parameters);
+                };
+            }
+            catch(err) 
+            {
+                CordAPI.Logging.Error(`Failed to Patch Method: ${name}\nException: ${err}\nMake an issue report with this on the github.`);
+                return null;
+            }     
+        },
         LoadPlugin: function(path)
         {
             try 
